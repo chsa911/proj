@@ -14,7 +14,7 @@ const BooksTable = ({ books }) => {
             Author
           </th>
           <th className='border border-slate-600 rounded-md max-md:hidden'>
-            Publish Year
+            KW1Pos
           </th>
           <th className='border border-slate-600 rounded-md'>Operations</th>
         </tr>
@@ -32,7 +32,7 @@ const BooksTable = ({ books }) => {
               {book.author}
             </td>
             <td className='border border-slate-700 rounded-md text-center max-md:hidden'>
-              {book.publishYear}
+              {book.KW1Pos}
             </td>
             <td className='border border-slate-700 rounded-md text-center'>
               <div className='flex justify-center gap-x-4'>
