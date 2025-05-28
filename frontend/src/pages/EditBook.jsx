@@ -8,7 +8,7 @@ import { useSnackbar } from 'notistack';
 const EditBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [publishYear, setPublishYear] = useState('');
+  const [marking, setmarking] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const {id} = useParams();
@@ -19,7 +19,7 @@ const EditBook = () => {
     axios.get(`http://localhost:5555/books/${id}`)
     .then((response) => {
         setAuthor(response.data.author);
-        setPublishYear(response.data.publishYear)
+        setmarking(response.data.marking)
         setTitle(response.data.title)
         setLoading(false);
       }).catch((error) => {
@@ -33,7 +33,7 @@ const EditBook = () => {
     const data = {
       title,
       author,
-      publishYear,
+      marking,
     };
     setLoading(true);
     axios
@@ -79,8 +79,8 @@ const EditBook = () => {
           <label className='text-xl mr-4 text-gray-500'>Publish Year</label>
           <input
             type='number'
-            value={publishYear}
-            onChange={(e) => setPublishYear(e.target.value)}
+            value={marking}
+            onChange={(e) => setmarking(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
         </div>
