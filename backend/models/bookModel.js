@@ -10,7 +10,7 @@ const bookSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    KW1Pos: {
+    BBreite: {
       type: Number,
       required: true,
     },

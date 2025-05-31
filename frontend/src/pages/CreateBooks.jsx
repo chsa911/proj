@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
 const CreateBooks = () => {
-  const [title, setKW1] = useState('');
+  const [title, setBMark] = useState('');
   const [author, setAuthor] = useState('');
-  const [KW1Pos, setKW1Pos] = useState('');
+  const [BBreite, setBBreite] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
@@ -17,7 +17,7 @@ const CreateBooks = () => {
     const data = {
       title,
       author,
-      KW1Pos,
+      BBreite,
     };
     setLoading(true);
     axios
@@ -42,11 +42,11 @@ const CreateBooks = () => {
       {loading ? <Spinner /> : ''}
       <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto'>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>KW1</label>
+          <label className='text-xl mr-4 text-gray-500'>BMark</label>
           <input
             type='text'
             value={title}
-            onChange={(e) => setKW1(e.target.value)}
+            onChange={(e) => setBMark(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />
         </div>
@@ -60,11 +60,11 @@ const CreateBooks = () => {
           />
         </div>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>KW1Pos</label>
+          <label className='text-xl mr-4 text-gray-500'>BBreite</label>
           <input
             type='number'
-            value={KW1Pos}
-            onChange={(e) => setKW1Pos(e.target.value)}
+            value={BBreite}
+            onChange={(e) => setBBreite(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
         </div>
