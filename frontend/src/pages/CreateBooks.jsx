@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
 const CreateBooks = () => {
-  const [title, setBMark] = useState('');
+  const [BMark, setBMark] = useState('');
   const [author, setAuthor] = useState('');
   const [BBreite, setBBreite] = useState('');
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,7 @@ const CreateBooks = () => {
 
   const handleSaveBook = () => {
     const data = {
-      title,
+      BMark,
       author,
       BBreite,
     };
@@ -45,7 +45,7 @@ const CreateBooks = () => {
           <label className='text-xl mr-4 text-gray-500'>BMark</label>
           <input
             type='text'
-            value={title}
+            value={BMark}
             onChange={(e) => setBMark(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />

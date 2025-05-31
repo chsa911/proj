@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
 const EditBook = () => {
-  const [title, setBMark] = useState('');
+  const [BMark, setBMark] = useState('');
   const [author, setAuthor] = useState('');
   const [BBreite, setBBreite] = useState('');
   const [loading, setLoading] = useState(false);
@@ -20,7 +20,7 @@ const EditBook = () => {
     .then((response) => {
         setAuthor(response.data.author);
         setBBreite(response.data.BBreite)
-        setBMark(response.data.title)
+        setBMark(response.data.BMark)
         setLoading(false);
       }).catch((error) => {
         setLoading(false);
@@ -31,7 +31,7 @@ const EditBook = () => {
   
   const handleEditBook = () => {
     const data = {
-      title,
+      BMark,
       author,
       BBreite,
     };
@@ -61,7 +61,7 @@ const EditBook = () => {
           <label className='text-xl mr-4 text-gray-500'>BMark</label>
           <input
             type='text'
-            value={title}
+            value={BMark}
             onChange={(e) => setBMark(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />

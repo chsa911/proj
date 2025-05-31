@@ -7,16 +7,16 @@ const router = express.Router();
 router.post('/', async (request, response) => {
   try {
     if (
-      !request.body.title ||
+      !request.body.BMark ||
       !request.body.author ||
       !request.body.BBreite
     ) {
       return response.status(400).send({
-        message: 'Send all required fields: title, author, BBreite',
+        message: 'Send all required fields: BMark, author, BBreite',
       });
     }
     const newBook = {
-      title: request.body.title,
+      BMark: request.body.BMark,
       author: request.body.author,
       BBreite: request.body.BBreite,
     };
@@ -63,12 +63,12 @@ router.get('/:id', async (request, response) => {
 router.put('/:id', async (request, response) => {
   try {
     if (
-      !request.body.title ||
+      !request.body.BMark ||
       !request.body.author ||
       !request.body.BBreite
     ) {
       return response.status(400).send({
-        message: 'Send all required fields: title, author, BBreite',
+        message: 'Send all required fields: BMark, author, BBreite',
       });
     }
 
