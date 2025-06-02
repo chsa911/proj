@@ -40,8 +40,8 @@ const ShowBook = () => {
             <span>{book.BMark}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Author</span>
-            <span>{book.author}</span>
+            <span className='text-xl mr-4 text-gray-500'>BHoehe</span>
+            <span>{book.BHoehe}</span>
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>BBreite</span>

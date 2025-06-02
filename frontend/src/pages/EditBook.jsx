@@ -7,7 +7,7 @@ import { useSnackbar } from 'notistack';
 
 const EditBook = () => {
   const [BMark, setBMark] = useState('');
-  const [author, setAuthor] = useState('');
+  const [BHoehe, setBHoehe] = useState('');
   const [BBreite, setBBreite] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const EditBook = () => {
     setLoading(true);
     axios.get(`http://localhost:5555/books/${id}`)
     .then((response) => {
-        setAuthor(response.data.author);
+        setBHoehe(response.data.BHoehe);
         setBBreite(response.data.BBreite)
         setBMark(response.data.BMark)
         setLoading(false);
@@ -32,7 +32,7 @@ const EditBook = () => {
   const handleEditBook = () => {
     const data = {
       BMark,
-      author,
+      BHoehe,
       BBreite,
     };
     setLoading(true);
@@ -67,11 +67,11 @@ const EditBook = () => {
           />
         </div>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Author</label>
+          <label className='text-xl mr-4 text-gray-500'>BHoehe</label>
           <input
             type='text'
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
+            value={BHoehe}
+            onChange={(e) => setBHoehe(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
         </div>
