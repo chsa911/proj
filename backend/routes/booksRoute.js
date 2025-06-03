@@ -8,16 +8,16 @@ router.post('/', async (request, response) => {
   try {
     if (
       !request.body.BMark ||
-      !request.body.author ||
+      !request.body.BHoehe ||
       !request.body.BBreite
     ) {
       return response.status(400).send({
-        message: 'Send all required fields: BMark, author, BBreite',
+        message: 'Send all required fields: BMark, BHoehe, BBreite',
       });
     }
     const newBook = {
       BMark: request.body.BMark,
-      author: request.body.author,
+      BHoehe: request.body.BHoehe,
       BBreite: request.body.BBreite,
     };
 
@@ -64,11 +64,11 @@ router.put('/:id', async (request, response) => {
   try {
     if (
       !request.body.BMark ||
-      !request.body.author ||
+      !request.body.BHoehe ||
       !request.body.BBreite
     ) {
       return response.status(400).send({
-        message: 'Send all required fields: BMark, author, BBreite',
+        message: 'Send all required fields: BMark, BHoehe, BBreite',
       });
     }
 

@@ -11,7 +11,7 @@ const BooksTable = ({ books }) => {
           <th className='border border-slate-600 rounded-md'>No</th>
           <th className='border border-slate-600 rounded-md'>BMark</th>
           <th className='border border-slate-600 rounded-md max-md:hidden'>
-            Author
+            BHoehe
           </th>
           <th className='border border-slate-600 rounded-md max-md:hidden'>
             BBreite
@@ -29,7 +29,7 @@ const BooksTable = ({ books }) => {
               {book.BMark}
             </td>
             <td className='border border-slate-700 rounded-md text-center max-md:hidden'>
-              {book.author}
+              {book.BHoehe}
             </td>
             <td className='border border-slate-700 rounded-md text-center max-md:hidden'>
               {book.BBreite}
