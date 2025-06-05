@@ -18,5 +18,5 @@
 
 //Konkatenate Values to complete Bookmark
         position+colour+barcode;
-// Pass Booksmark to Inputfield
+// Pass Booksmark to Inputfield in CreateBooks
         setBMark;
