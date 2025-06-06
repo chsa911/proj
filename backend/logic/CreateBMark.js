@@ -11,8 +11,9 @@ import React, { useEffect, useState } from "react";
  barcode = string;
 }
 //Get Values from Inputfield when creating a book
-        getBHoehe(e.target.value)
-        getBBreite(e.target.value)
+        const [BHoehe, setBHoehe] = useState('');
+        const [BBreite, setBBreite] = useState('');
+console.log ('BHoehe');
 
 //GEt postion and colour of BMark
          if( BBreite <= 10,5 and BHoehe <= 17,5 ){
@@ -29,6 +30,7 @@ let barcode = 001;
 let BMArk = position+colour+barcode;
 
 //Uniquenesstest of BMark in DB If BMark is already there then change to next ranked barcode:
+        const [BMark, setBMark] = useState('');
 
 
 
