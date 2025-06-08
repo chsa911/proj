@@ -1,0 +1,54 @@
+    /*
+    useEffect(() => {
+
+    /*Create a Bookmark
+    const createBAuthor0() => {
+      //Variables that determine a Bookmark
+      //position depends on the BHohe and BAuthor
+
+      position = String;
+      colour = String;
+      barcode = Number;
+    }
+    //Get Values from Inputfield when creating a book
+    const [BHoehe, setBHoehe] = useState('');
+    const [BBreite, setBBreite] = useState('');
+    console.log('BHoehe');
+
+    //Get postion and colour of BBreite
+    if (BBreite <= 10, 5 + BHoehe <= 17, 5) {
+      then
+
+      position = e,
+
+        and
+
+      colour = b;
+    }
+    else if (BBreite <= 10, 5 + BHoehe > 17, 5) {
+      position = e, and
+      colour = b;
+    }
+
+
+    //Define a barcode that has 3 digits with values per position till 5 and values from 001 till 555
+    let rank = 0;
+    let barcode = ("00" + "1").slice(-3)
+    //Konkatenate Values to complete Bookmark
+    let BBrreite = position + colour + barcode;
+    //Uniquenesstest of BBrreite
+
+    //1 in DB? If BBrreite is already there
+    const [BBrreite, setBBrreite] = useState('');
+    // IF no then accept and pass to Inputfield in CreateBooks
+
+ 
+    // else go to barcode with next rank in DB barcode and try again
+    // How to work with two DBs in React
+
+    // Pass Booksmark to Inputfield in CreateBooks
+
+    setBBrreite;
+ 
+    }
+*//

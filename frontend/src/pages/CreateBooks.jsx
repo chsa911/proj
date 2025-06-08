@@ -46,6 +46,7 @@ const CreateBooks = () => {
           <input
             type='text'
             value={BMark}
+            name="BMark"
             onChange={(e) => setBMark(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />
@@ -55,6 +56,7 @@ const CreateBooks = () => {
           <input
             type='text'
             value={BHoehe}
+            name="BHoehe"
             onChange={(e) => setBHoehe(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
@@ -64,6 +66,7 @@ const CreateBooks = () => {
           <input
             type='number'
             value={BBreite}
+            name="BBreite"
             onChange={(e) => setBBreite(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
@@ -75,5 +78,4 @@ const CreateBooks = () => {
     </div>
   );
 }
-
 export default CreateBooks
